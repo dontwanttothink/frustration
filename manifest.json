@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "Frustration",
+	"version": "1.0.0",
+	"description": "Automatically logs me back into my UNAL account, no matter how many times it decides to log me out again.",
+	"icons": {
+		"48": "icons/frust-48.png",
+		"128": "icons/frust-128.png"
+	},
+	"action": {
+		"default_popup": "configure.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.unal.edu.co/*",
+				"*://smartkey.xertica.com/*"
+			],
+			"js": [
+				"autofill.mjs"
+			]
+		}
+	],
+	"permissions": [
+		"storage"
+	]
+}

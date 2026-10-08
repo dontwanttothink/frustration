@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración</title>
+
+  <style>
+	:root {
+		color-scheme: light dark;
+	}
+
+	body {
+		font-family: system-ui, sans-serif;
+		padding: 0.2em;
+	}
+
+	input {
+		display: block;
+		margin-bottom: 0.7em;
+
+		&#pass {
+			margin-bottom: 0;
+		}
+	}
+
+	label {
+		display: block;
+		margin-bottom: 0.3em;
+	}
+
+	label, input {
+		display: block;
+	}
+
+	input {
+		border-style: solid;
+		border-radius: 0.5em;
+		border-width: 1px;
+	}
+  </style>
+  <script type="module" src="configure.mjs"></script>
+</head>
+<body>
+	<label for="name">
+		Nombre de usuario (sin @unal.edu.co)
+	</label>
+	<input id="name" type="text" name="name">
+
+	<label for="pass">
+		Contraseña
+	</label>
+	<input id="pass" type="password" name="name">
+</body>
+</html>
